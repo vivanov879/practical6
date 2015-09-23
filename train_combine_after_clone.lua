@@ -158,7 +158,6 @@ for i = 1, iterations do
     if i % opt.print_every == 0 then
         print(string.format("iteration %4d, loss = %6.8f, loss/seq_len = %6.8f, gradnorm = %6.4e", i, loss[1], loss[1] / opt.seq_length, grad_params:norm()))
         print(params:clone():pow(2):sum())
-        print(params:size())
     end
 end
 
